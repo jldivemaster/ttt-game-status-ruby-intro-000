@@ -21,7 +21,7 @@ def won?(board)
       else
         return false
       end
-    end  
+    end
   end
       #if(board(trw[1]) == "X") && (board(trw[2]) == "X")) ((board[idx] == "X") && (board[trw[1]] == "X") && (board[trw[2]] == "X")) || ((board[trw[0]] == "O") && (board[trw[1]] == "O") && (board[trw[2]] == "O"))
   #  return trw
