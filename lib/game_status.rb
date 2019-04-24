@@ -12,7 +12,7 @@ def won?(board)
   if board.all?{ |i| i == " " || i == "" || i == nil }
     return false
   end
-  
+
   index = trw.each { |ele| return ele }
   position = board[index]
 
@@ -24,7 +24,7 @@ def won?(board)
       else
         return false
       end
-          
+
        # Will evaluate to true for 1, true for 3
     end #=> true
      #=> true
