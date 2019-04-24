@@ -63,7 +63,8 @@ end
 
 def winner(board)
 
-  win = WIN_COMBINATIONS.each do |win_combination|
+  if won?(board)
+    win = WIN_COMBINATIONS.each do |win_combination|
 
     win_index_1 = win_combination[0]
     win_index_2 = win_combination[1]
@@ -73,12 +74,10 @@ def winner(board)
     position_2 = board[win_index_2] # load the value of the board at win_index_2
     position_3 = board[win_index_3] # load the value of the board at win_index_3
 
-    if won?(board) && (position_1 == "X" && position_2 == "X" && position_3 == "X")
+    if (position_1 == "X" && position_2 == "X" && position_3 == "X")
       return "X"
-    elsif won?(board) && (position_1 == "O" && position_2 == "O" && position_3 == "O")
+    elsif (position_1 == "O" && position_2 == "O" && position_3 == "O")
       return "O"
-    else
-      return nil
     end
   end
 end
