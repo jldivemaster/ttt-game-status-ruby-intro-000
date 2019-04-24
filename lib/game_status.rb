@@ -53,7 +53,7 @@ end
 
 
 def over?(board)
-  if !(won?(board) == false) || (board.all?{ |i| (i == "X" || i == "O") } )
+  if won?(board) || draw?(board)
     return true
   else
     return false
