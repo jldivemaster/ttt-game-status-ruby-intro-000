@@ -18,7 +18,7 @@ def won?(board)
 
   win = position.all? do |i|
       (i == "X")? || (i == "O")?
-        
+
   end
   if win == true
     return trw
