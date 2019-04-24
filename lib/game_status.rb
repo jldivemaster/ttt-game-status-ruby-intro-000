@@ -77,8 +77,8 @@ def winner(board)
       return "X"
     elsif won?(board) && (position_1 == "O" && position_2 == "O" && position_3 == "O")
       return "O"
-    elsif draw?(board)
-      return nil
+    else 
+      nil
     end
   end
 end
