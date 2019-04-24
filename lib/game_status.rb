@@ -28,6 +28,10 @@ def won?(board)
       false
     end
   end
+
+  if ( board.all?{ |i| (i == "X" || i == "O" ) } ) && !((position_1 == "X" && position_2 == "X" && position_3 == "X") || (position_1 == "O" && position_2 == "O" && position_3 == "O"))
+    return false
+  end
 end
 
 def full?(board)
