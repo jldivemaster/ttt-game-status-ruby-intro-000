@@ -42,7 +42,7 @@ end
 
 
 def draw?(board)
-  if ( board.all?{ |i| (i == "X" || i == "O" ) } ) && !(won?(board))
+  if ( board.all?{ |i| (i == "X" || i == "O" ) } )
     return true
   else
     return false
