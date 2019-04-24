@@ -64,7 +64,7 @@ end
 def winner(board)
 
   if won?(board) == false
-    nil
+    return "nil"
   end
 
   win = WIN_COMBINATIONS.each do |win_combination|
