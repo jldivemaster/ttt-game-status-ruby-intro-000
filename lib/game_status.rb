@@ -10,7 +10,7 @@ def won?(board)
   if board.all? {|i| (i == " ") || (i == "") || (i == nil) }
     return false
   end
-
+  
   WIN_COMBINATIONS.each do |win_combination|
     win_index_1 = win_combination[0]
     win_index_2 = win_combination[1]
@@ -49,7 +49,7 @@ end
 
 
 def over?(board)
-  if (won?(board) == true) || (board.all?{ |i| (i == "X" || i == "O") } )
+  if !(won?(board) == false) || (board.all?{ |i| (i == "X" || i == "O") } )
     return true
   else
     return false
