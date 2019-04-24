@@ -16,11 +16,11 @@ def won?(board)
   index = trw.each { |ele| return ele }
   position = board[index]
 
-  win = position.all? do |i|
-      (i == "X")? || (i == "O")?
-
+  X_win = position.all? do |i|
+      (i == "X")?
   end
-  if win == true
+  
+  if X_win == true
     return trw
   else
     return false
