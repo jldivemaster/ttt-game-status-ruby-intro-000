@@ -12,23 +12,23 @@ def won?(board)
   if board.all?{ |i| i == " " || i == "" || i == nil }
     return false
   end
+  
+  index = trw.each { |ele| return ele }
+  position = board[index]
 
-#  WIN_COMBINATIONS.each do |sub_arr|
-  trw.each do |idx|
-    position = board[idx]
-
-    if position.all?{ |i| (i == "X") || (i == "O") }
-      return trw
-    else
-      return false
-    end
+  X_win = position.all? do |i|
+      if (i == "X")?
+        return trw
+      elsif (i == "O")?
+        return trw
+      else
+        return false
+      end
+          
+       # Will evaluate to true for 1, true for 3
+    end #=> true
+     #=> true
   end
-  #end
-      #if(board(trw[1]) == "X") && (board(trw[2]) == "X")) ((board[idx] == "X") && (board[trw[1]] == "X") && (board[trw[2]] == "X")) || ((board[trw[0]] == "O") && (board[trw[1]] == "O") && (board[trw[2]] == "O"))
-  #  return trw
-  #else
-  #  return false
-  #end
 
 end
 
